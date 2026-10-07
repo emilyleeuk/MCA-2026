@@ -26,8 +26,27 @@
 <body>
     <div class="box">
     <div class="header"><h1>Week 3</h1>
-        <p>[Insert your response to task 2 here.]</p>
-    </div>
+        <p>[<div class="header">
+            <h1>Week 3</h1>
+
+<h2>MusicXML and MEI Comparison</h2>
+
+<h3>1. Note</h3>
+
+<p>
+In MusicXML, a note is represented using a &lt;note&gt; element, with information such as pitch and duration stored inside it. In MEI, notes are also represented using a &lt;note&gt; element, but information such as pitch can be stored using attributes such as pname and oct. This shows that the two standards can represent the same musical information in different ways.
+</p>
+<h3>2. Measure</h3>
+
+<p>
+In MusicXML, each bar is usually represented using a &lt;measure&gt; element, and the measure number can be stored as an attribute. In MEI, a bar can also be represented using a &lt;measure&gt; element. The two standards therefore use a similar structure for organising music into bars.
+</p>
+<h3>3. Clef</h3>
+
+<p>
+In MusicXML, the clef is described using a &lt;clef&gt; element with information such as the sign and staff line. In MEI, clef information can also be represented, but it may use different attributes and structures. This shows that both standards record the same musical feature in slightly different ways.
+</p>
+</div>
     <div id="app">Verovio is loading...</div>
     <script type="module">
         import 'https://www.verovio.org/javascript/app/verovio-app.js';
