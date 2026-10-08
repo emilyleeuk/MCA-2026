@@ -1,77 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Version 1.0 -->
+
 <head>
-    <meta charset="utf-8">
-    <title>My Piece in Verovio</title>
-    <style>
+  <meta charset="utf-8">
+  <title>Verovio Score</title>
+
+  <style>
     html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
     }
-    .box {
-        display: flex;
-        flex-flow: column;
-        height: 100%;
+
+    #app {
+      width: 100%;
+      height: 100%;
     }
-    .box .header {
-       flex: 0 1 auto;
-    }
-    .box #app {
-        flex: 1 1 auto;
-    }
-    </style>
+  </style>
+
 </head>
+
 <body>
-    <div class="box">
-    <div class="header"><h1>Week 3</h1>
-        <p>[<div class="header">
-            <h1>Week 3</h1>
 
-<h2>MusicXML and MEI Comparison</h2>
+  <div id="app">Verovio is loading...</div>
 
-<h3>1. Note</h3>
+  <script type="module">
 
-<p>
-In MusicXML, a note is represented using a &lt;note&gt; element, with information such as pitch and duration stored inside it. In MEI, notes are also represented using a &lt;note&gt; element, but information such as pitch can be stored using attributes such as pname and oct. This shows that the two standards can represent the same musical information in different ways.
-</p>
-<h3>2. Measure</h3>
+    import 'https://www.verovio.org/javascript/app/verovio-app.js';
 
-<p>
-In MusicXML, each bar is usually represented using a &lt;measure&gt; element, and the measure number can be stored as an attribute. In MEI, a bar can also be represented using a &lt;measure&gt; element. The two standards therefore use a similar structure for organising music into bars.
-</p>
-<h3>3. Clef</h3>
+    const options = {
+      defaultView: 'responsive',
+      defaultZoom: 3,
+      enableResponsive: true,
+      enableDocument: true
+    };
 
-<p>
-In MusicXML, the clef is described using a &lt;clef&gt; element with information such as the sign and staff line. In MEI, clef information can also be represented, but it may use different attributes and structures. This shows that both standards record the same musical feature in slightly different ways.
-</p>
-</div>
-    <div id="app">Verovio is loading...</div>
-    <script type="module">
-        import 'https://www.verovio.org/javascript/app/verovio-app.js';
-        
-        const options = {
-            defaultView: 'responsive', // default is 'responsive', alternative is 'document'
-            defaultZoom: 3, // 0-7, default is 4
-            enableResponsive: true, // default is true
-            enableDocument: true // default is true
-        }
-        
-        // A MEI file
-        var file ='data/week3-mozart.mei?v=2';
-        // A MEI file
-        //var file = 'https://www.verovio.org/editor/brahms.mei';
-        
-        const app = new Verovio.App(document.getElementById("app"), options);
-        fetch(file)
-            .then(function(response) {
-                return response.text();
-            })
-            .then(function(text) {
-                app.loadData(text);
-            });
-    </script>
-    </div>
+    var file = 'data/week3-mozart.mei?v=2';
+
+    const app = new Verovio.App(
+      document.getElementById("app"),
+      options
+    );
+
+    fetch(file)
+      .then(function(response) {
+        return response.text();
+      })
+      .then(function(text) {
+        app.loadData(text);
+      });
+
+  </script>
+
 </body>
+
 </html>
