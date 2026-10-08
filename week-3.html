@@ -4,36 +4,46 @@
   <title>Week 3 - MCA Portfolio</title>
 
   <style>
-    body 
-    {margin: 0;
+    body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #efe4d3;
-      color: #3d2b1f;}
+      color: #3d2b1f;
+    }
 
-    .header 
-    {background-color: #5a3d2b;
+    .header {
+      background-color: #5a3d2b;
       color: white;
       text-align: center;
-      padding: 30px;}
+      padding: 30px;
+    }
 
-    .header a 
-    {color: white;
+    .header a {
+      color: white;
       text-decoration: none;
-      margin: 0 8px;}
+      margin: 0 8px;
+    }
 
-    .content 
-    {width: 80%;
-      max-width: 850px;
+    .content {
+      width: 80%;
+      max-width: 1000px;
       margin: 40px auto;
       background-color: white;
       padding: 30px;
-      line-height: 1.6;}
+      line-height: 1.6;
+    }
 
-    h2 
-    {color: #6b4730;}
+    h2 {
+      color: #6b4730;
+    }
 
-    .file-link 
-    {color: #6b4730;}
+    .file-link {
+      color: #6b4730;
+    }
+
+    iframe {
+      margin-top: 15px;
+    }
   </style>
 
 </head>
@@ -61,17 +71,32 @@
       For this week's lab, I exported my MuseScore transcription as MusicXML and converted it into MEI using Verovio.
     </p>
 
+    <h2>Files</h2>
+
+    <p>
+      <a class="file-link" href="data/week3-mozart.musicxml">
+        Download MusicXML file
+      </a>
+    </p>
+
+    <p>
+      <a class="file-link" href="data/week3-mozart.mei">
+        Download MEI file
+      </a>
+    </p>
+
     <h2>Verovio</h2>
 
     <p>
       I then uploaded my MEI file to GitHub and used Verovio to render the score.
     </p>
 
-    <p>
-      <a class="file-link" href="verovio.html">
-        View my Verovio score and XML comparison
-      </a>
-    </p>
+    <iframe
+      src="verovio.html"
+      width="100%"
+      height="650"
+      style="border: none;">
+    </iframe>
 
   </div>
 
