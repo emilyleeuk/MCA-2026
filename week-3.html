@@ -42,6 +42,9 @@
     }
 
     iframe {
+      width: 100%;
+      height: 650px;
+      border: none;
       margin-top: 15px;
     }
   </style>
@@ -65,38 +68,53 @@
 
   <div class="content">
 
-    <h2>MusicXML and MEI</h2>
+    <h2>Task 1: MusicXML and MEI</h2>
 
     <p>
-      For this week's lab, I exported my MuseScore transcription as MusicXML and converted it into MEI using Verovio.
-    </p>
-
-    <h2>Files</h2>
-
-    <p>
-      <a class="file-link" href="data/week3-mozart.musicxml">
-        Download MusicXML file
-      </a>
+      For this week's task, I exported my MuseScore transcription as a MusicXML file and then converted it into an MEI file using Verovio.
     </p>
 
     <p>
-      <a class="file-link" href="data/week3-mozart.mei">
-        Download MEI file
-      </a>
+      Both files can be accessed below:
     </p>
-
-    <h2>Verovio</h2>
 
     <p>
-      I then uploaded my MEI file to GitHub and used Verovio to render the score.
+      <a class="file-link" href="data/week3-mozart.musicxml">MusicXML file</a>
     </p>
 
-    <iframe
-      src="verovio.html"
-      width="100%"
-      height="650"
-      style="border: none;">
-    </iframe>
+    <p>
+      <a class="file-link" href="data/week3-mozart.mei">MEI file</a>
+    </p>
+
+    <h2>Task 2: Verovio Rendering</h2>
+
+    <p>
+      For the second part of the task, I used Verovio to render my MEI file as musical notation.
+    </p>
+
+    <h2>MusicXML and MEI Comparison</h2>
+
+    <h3>1. Note</h3>
+
+    <p>
+      In MusicXML, a note is represented using a &lt;note&gt; element, with information such as pitch and duration stored inside it. In MEI, a note is also represented using a &lt;note&gt; element, but information such as pitch can be stored using attributes such as pname and oct.
+    </p>
+
+    <h3>2. Measure</h3>
+
+    <p>
+      In MusicXML, each bar is usually represented using a &lt;measure&gt; element. MEI also uses a &lt;measure&gt; element to organise music into bars.
+    </p>
+
+    <h3>3. Clef</h3>
+
+    <p>
+      In MusicXML, clef information is stored using a &lt;clef&gt; element. MEI also records clef information, but the attributes and structure can be different.
+    </p>
+
+    <h2>Rendered Score</h2>
+
+    <iframe src="verovio.html"></iframe>
 
   </div>
 
