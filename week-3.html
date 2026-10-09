@@ -29,12 +29,19 @@
       max-width: 1000px;
       margin: 40px auto;
       background-color: white;
-      padding: 30px;
+      padding: 35px;
       line-height: 1.6;
     }
 
     h2 {
       color: #6b4730;
+      margin-top: 30px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 5px;
     }
 
     a {
@@ -73,7 +80,9 @@
       For this week's task, I exported my MuseScore transcription as a MusicXML file and then converted it into an MEI file using Verovio.
     </p>
 
-    <p>Both files can be accessed below:</p>
+    <p>
+      Both files can be accessed below:
+    </p>
 
     <p>
       <a href="data/week3-mozart.musicxml">MusicXML file</a>
@@ -87,7 +96,7 @@
     <h2>Task 2: Verovio Rendering</h2>
 
     <p>
-      For the second part of the task, I used Verovio to render my MEI file as musical notation.
+      For the second part of the task, I used Verovio to display my MEI file as musical notation.
     </p>
 
 
@@ -96,21 +105,21 @@
     <h3>1. Note</h3>
 
     <p>
-      In MusicXML, a note is represented using a &lt;note&gt; element, with information such as pitch and duration stored inside it. In MEI, a note is also represented using a &lt;note&gt; element, but pitch can be stored using attributes such as pname and oct.
+      In MusicXML, a note is shown using a &lt;note&gt; element. Information such as pitch and duration is included inside it. MEI also uses a &lt;note&gt; element, but some information such as pitch can be stored using attributes like pname and oct.
     </p>
 
 
     <h3>2. Measure</h3>
 
     <p>
-      In MusicXML, each bar is represented using a &lt;measure&gt; element. MEI also uses a &lt;measure&gt; element to organise music into bars.
+      Both MusicXML and MEI use a &lt;measure&gt; element to organise the music into bars. This means they represent measures in a fairly similar way.
     </p>
 
 
     <h3>3. Clef</h3>
 
     <p>
-      In MusicXML, clef information is stored using a &lt;clef&gt; element. MEI also records clef information, although the attributes and structure can be different.
+      MusicXML uses a &lt;clef&gt; element to describe the clef. MEI also stores clef information, but it can use slightly different attributes and structure.
     </p>
 
 
