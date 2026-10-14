@@ -1,29 +1,132 @@
-<h2>Task 2: music21 Analysis</h2>
+<html>
 
-<p>
-For this task, I used music21 to create different visualisations of my piece.
-</p>
+<head>
+  <title>Week 4 - MCA Portfolio</title>
 
-<h3>Piano Roll</h3>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #efe4d3;
+      color: #3d2b1f;
+    }
 
-<img src="data/Piano-roll.png" width="70%">
+    .header {
+      background-color: #5a3d2b;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
 
-<p>
-The piano roll shows where different pitches appear throughout the piece. Most of the notes are in the middle register, although there are also some higher and lower notes.
-</p>
+    .header a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+    }
 
-<h3>Pitch Histogram</h3>
+    .content {
+      width: 80%;
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 35px;
+      line-height: 1.6;
+    }
 
-<img src="data/pitch-histogram.png" width="70%">
+    h2 {
+      color: #6b4730;
+      margin-top: 30px;
+    }
 
-<p>
-The pitch histogram shows how often each pitch appears. The graph suggests that notes around the middle register are used most frequently.
-</p>
+    h3 {
+      margin-top: 30px;
+    }
 
-<h3>Pitch and Note Length</h3>
+    .graph {
+      width: 55%;
+      max-width: 550px;
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
 
-<img src="data/scatter-plot.png" width="70%">
+</head>
 
-<p>
-This graph compares pitch with note length. Most of the notes have fairly short durations, while longer notes appear less often.
-</p>
+<body>
+
+  <div class="header">
+
+    <h1>Week 4: Music Analysis</h1>
+
+    <p>
+      <a href="blankPage.html">Home</a> |
+      <a href="week-1.html">Week 1</a> |
+      <a href="week-2.html">Week 2</a> |
+      <a href="week-3.html">Week 3</a> |
+      <a href="week-4.html">Week 4</a>
+    </p>
+
+  </div>
+
+
+  <div class="content">
+
+    <h2>Task 1: jSymbolic Analysis</h2>
+
+    <p>
+      For this task, I exported my piece as a MIDI file and analysed it using jSymbolic.
+    </p>
+
+    <p><strong>Range:</strong> 20</p>
+    <p><strong>Mean Pitch:</strong> 60</p>
+    <p><strong>Most Common Pitch Class:</strong> 0 (C)</p>
+    <p><strong>Last Pitch:</strong> 54</p>
+    <p><strong>Most Common Rhythmic Value:</strong> 0.5</p>
+
+    <p>
+      The most common pitch class is C, which matches the key of the piece.
+      The rhythmic value of 0.5 also shows that shorter notes are used quite often.
+    </p>
+
+
+    <h2>Task 2: music21 Analysis</h2>
+
+    <p>
+      For this task, I used music21 to create different visualisations of my piece.
+    </p>
+
+
+    <h3>Piano Roll</h3>
+
+    <img class="graph" src="data/Piano-roll.png">
+
+    <p>
+      The piano roll shows where different pitches appear throughout the piece.
+      Most of the notes are in the middle register, with some higher and lower notes as well.
+    </p>
+
+
+    <h3>Pitch Histogram</h3>
+
+    <img class="graph" src="data/pitch-histogram.png">
+
+    <p>
+      The pitch histogram shows how often different pitches appear.
+      It shows that notes in the middle register are used most often.
+    </p>
+
+
+    <h3>Pitch and Note Length</h3>
+
+    <img class="graph" src="data/scatter-plot.png">
+
+    <p>
+      This graph compares pitch with note length.
+      Most of the notes have shorter durations, while longer notes appear less often.
+    </p>
+
+  </div>
+
+</body>
+
+</html>
