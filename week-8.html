@@ -1,1 +1,262 @@
+<html>
 
+<head>
+  <title>Week 8 - MCA Portfolio</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #efe4d3;
+      color: #3d2b1f;
+    }
+
+    .header {
+      background-color: #5a3d2b;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .content {
+      width: 80%;
+      max-width: 1100px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 35px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #6b4730;
+      margin-top: 35px;
+    }
+
+    h3 {
+      color: #6b4730;
+      margin-top: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #b8a99a;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #efe4d3;
+    }
+
+    .graph {
+      width: 90%;
+      max-width: 900px;
+      display: block;
+      margin: 20px auto;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div class="header">
+
+    <h1>Week 8: Music as Sound</h1>
+
+    <p>
+      <a href="blankPage.html">Home</a> |
+      <a href="week-1.html">Week 1</a> |
+      <a href="week-2.html">Week 2</a> |
+      <a href="week-3.html">Week 3</a> |
+      <a href="week-4.html">Week 4</a> |
+      <a href="week-5.html">Week 5</a> |
+      <a href="week-7.html">Week 7</a> |
+      <a href="week-8.html">Week 8</a>
+    </p>
+
+  </div>
+
+
+  <div class="content">
+
+
+    <h2>Task 1: Audio Track Metadata</h2>
+
+    <p>
+      For this week's task, I selected three Mozart recordings with different
+      instrumentation and sound characteristics.
+    </p>
+
+
+    <table>
+
+      <tr>
+        <th>Metadata</th>
+        <th>Klarinettenkonzert A-Dur – 2. Adagio</th>
+        <th>Eine kleine Nachtmusik – 1. Allegro</th>
+        <th>Der Hölle Rache</th>
+      </tr>
+
+      <tr>
+        <td><strong>Title</strong></td>
+        <td>Klarinettenkonzert A-Dur – 2. Adagio</td>
+        <td>Eine kleine Nachtmusik – 1. Allegro</td>
+        <td>Der Hölle Rache kocht in meinem Herzen</td>
+      </tr>
+
+      <tr>
+        <td><strong>Artist / Performer</strong></td>
+        <td>Bruce Edwards (clarinet); Fulda Symphonic Orchestra; Simon Schindler (conductor)</td>
+        <td>Advent Chamber Orchestra</td>
+        <td>Rachel Smith (soprano)</td>
+      </tr>
+
+      <tr>
+        <td><strong>Composer</strong></td>
+        <td>Wolfgang Amadeus Mozart</td>
+        <td>Wolfgang Amadeus Mozart</td>
+        <td>Wolfgang Amadeus Mozart</td>
+      </tr>
+
+      <tr>
+        <td><strong>Copyright / Licence</strong></td>
+        <td>EFF Open Audio License v1</td>
+        <td>CC BY-SA 2.0</td>
+        <td>CC BY-SA 2.5</td>
+      </tr>
+
+      <tr>
+        <td><strong>Genre</strong></td>
+        <td>Classical / Clarinet concerto</td>
+        <td>Classical / Serenade</td>
+        <td>Classical / Opera aria</td>
+      </tr>
+
+      <tr>
+        <td><strong>Source</strong></td>
+        <td>Wikimedia Commons; Fulda Symphonic Orchestra archive</td>
+        <td>Wikimedia Commons; Al Goldstein collection at ibiblio.org</td>
+        <td>Wikimedia Commons; Opsound / Internet Archive</td>
+      </tr>
+
+      <tr>
+        <td><strong>File / Audio Format</strong></td>
+        <td>OGG Vorbis</td>
+        <td>OGG Vorbis</td>
+        <td>OGG Vorbis</td>
+      </tr>
+
+      <tr>
+        <td><strong>Number of Channels</strong></td>
+        <td>2 (Stereo)</td>
+        <td>2 (Stereo)</td>
+        <td>2 (Stereo)</td>
+      </tr>
+
+      <tr>
+        <td><strong>Sample Rate</strong></td>
+        <td>44,100 Hz</td>
+        <td>44,100 Hz</td>
+        <td>44,100 Hz</td>
+      </tr>
+
+      <tr>
+        <td><strong>Bits per Second</strong></td>
+        <td>206 kbps</td>
+        <td>258 kbps</td>
+        <td>184 kbps</td>
+      </tr>
+
+      <tr>
+        <td><strong>Duration</strong></td>
+        <td>6:59</td>
+        <td>5:55</td>
+        <td>1:17</td>
+      </tr>
+
+    </table>
+
+
+    <h2>Task 2: Sonic Visualiser Analysis</h2>
+
+    <p>
+      I used Sonic Visualiser to examine the waveform and log-frequency
+      spectrogram of each recording.
+    </p>
+
+
+    <h3>Eine kleine Nachtmusik – 1. Allegro</h3>
+
+    <p><strong>Waveform</strong></p>
+
+    <img class="graph"
+         src="data/eine-kleine-waveform.png"
+         alt="Waveform of Eine kleine Nachtmusik">
+
+    <p><strong>Log-frequency Spectrogram</strong></p>
+
+    <img class="graph"
+         src="data/eine-kleine-spectrogram.png"
+         alt="Spectrogram of Eine kleine Nachtmusik">
+
+
+    <h3>Klarinettenkonzert A-Dur – 2. Adagio</h3>
+
+    <p><strong>Waveform</strong></p>
+
+    <img class="graph"
+         src="data/clarinet-waveform.png"
+         alt="Waveform of Mozart Clarinet Concerto">
+
+    <p><strong>Log-frequency Spectrogram</strong></p>
+
+    <img class="graph"
+         src="data/clarinet-spectrogram.png"
+         alt="Spectrogram of Mozart Clarinet Concerto">
+
+
+    <h3>Der Hölle Rache</h3>
+
+    <p><strong>Waveform</strong></p>
+
+    <img class="graph"
+         src="data/holle-rache-waveform.png"
+         alt="Waveform of Der Hölle Rache">
+
+    <p><strong>Log-frequency Spectrogram</strong></p>
+
+    <img class="graph"
+         src="data/holle-rache-spectrogram.png"
+         alt="Spectrogram of Der Hölle Rache">
+
+
+    <h2>Reflection</h2>
+
+    <p>
+      The waveform and spectrogram analysis will be discussed here.
+    </p>
+
+
+  </div>
+
+
+</body>
+
+</html>
