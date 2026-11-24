@@ -26,8 +26,8 @@
     }
 
     .content {
-      width: 80%;
-      max-width: 1100px;
+      width: 85%;
+      max-width: 1200px;
       margin: 40px auto;
       background-color: white;
       padding: 35px;
@@ -36,55 +36,61 @@
 
     h2 {
       color: #6b4730;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     h3 {
       color: #6b4730;
-      margin-top: 25px;
+      margin-top: 20px;
     }
 
-    .feature-grid {
+    .three-column {
       display: flex;
       gap: 20px;
       margin-top: 25px;
+      margin-bottom: 40px;
+      align-items: flex-start;
     }
 
-    .feature-item {
-      width: 33%;
+    .item {
+      width: 33.33%;
       text-align: center;
     }
 
-    .feature-item img {
+    .item img {
       width: 100%;
       height: auto;
+      display: block;
+      margin: 0 auto 12px auto;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 25px;
-    }
-
-    th, td {
-      border: 1px solid #b8a99a;
-      padding: 10px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #efe4d3;
-    }
-
-    a {
+    .item p {
+      font-weight: bold;
       color: #6b4730;
     }
-.graph {
-  width: 90%;
-  max-width: 950px;
-  display: block;
-  margin: 20px auto 40px auto;
-}
+
+    .comparison {
+      width: 70%;
+      max-width: 800px;
+      display: block;
+      margin: 25px auto 40px auto;
+    }
+
+    @media (max-width: 800px) {
+      .three-column {
+        display: block;
+      }
+
+      .item {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .comparison {
+        width: 100%;
+      }
+    }
+
   </style>
 
 </head>
@@ -122,184 +128,168 @@
     </p>
 
 
-    <div class="feature-grid">
+    <div class="three-column">
 
-      <div class="feature-item">
-        <img src="data/Eine Kleine .png"
+      <div class="item">
+        <img src="data/eine-feature-extraction.png"
              alt="Feature extraction for Eine kleine Nachtmusik">
 
-        <h3>Eine kleine Nachtmusik – 1. Allegro</h3>
+        <p>Eine kleine Nachtmusik – 1. Allegro</p>
       </div>
 
 
-      <div class="feature-item">
-        <img src="data/Klarinet .png"
+      <div class="item">
+        <img src="data/clarinet-feature-extraction.png"
              alt="Feature extraction for Clarinet Concerto">
 
-        <h3>Klarinettenkonzert A-Dur – 2. Adagio</h3>
+        <p>Klarinettenkonzert A-Dur – 2. Adagio</p>
       </div>
 
 
-      <div class="feature-item">
-        <img src="data/Der Holle Rache .png"
+      <div class="item">
+        <img src="data/rache-feature-extraction.png"
              alt="Feature extraction for Der Hölle Rache">
 
-        <h3>Der Hölle Rache</h3>
+        <p>Der Hölle Rache</p>
       </div>
 
     </div>
 
 
-    <h2>Raw Feature Data</h2>
+
+    <h2>Task 2: Computing and Visualising Histograms</h2>
 
     <p>
-      I exported the three feature layers for each recording as CSV files
-      so that the raw data could be analysed in Python.
+      I used Python in Jupyter Notebook to load the extracted feature data
+      and create histograms for each of the three recordings.
     </p>
 
 
-    <table>
 
-      <tr>
-        <th>Track</th>
-        <th>Spectrogram</th>
-        <th>MFCC</th>
-        <th>Chromagram</th>
-      </tr>
+    <h3>Histograms Computed from Spectrograms</h3>
 
+    <div class="three-column">
 
-      <tr>
+      <div class="item">
+        <img src="data/eine-spectrogram-histograms.png"
+             alt="Spectrogram histograms for Eine kleine Nachtmusik">
 
-        <td>Eine kleine Nachtmusik</td>
-
-        <td>
-          <a href="data/eine-spectro.csv">
-            Spectrogram CSV
-          </a>
-        </td>
-
-        <td>
-          <a href="data/Eine_kleine_MFCC.csv">
-            MFCC CSV
-          </a>
-        </td>
-
-        <td>
-          <a href="data/eine-chroma12.csv">
-            Chroma CSV
-          </a>
-        </td>
-
-      </tr>
+        <p>Eine kleine Nachtmusik</p>
+      </div>
 
 
-      <tr>
+      <div class="item">
+        <img src="data/clarinet-spectrogram-histograms.png"
+             alt="Spectrogram histograms for Clarinet Concerto">
 
-        <td>Klarinettenkonzert A-Dur</td>
-
-        <td>
-          <a href="data/clarinet-spectro.csv">
-            Spectrogram CSV
-          </a>
-        </td>
-
-        <td>
-          <a href="data/Klarinet_Mfcc.csv">
-            MFCC CSV
-          </a>
-        </td>
-
-        <td>
-          <a href="data/Klarinet_chroma.csv">
-            Chroma CSV
-          </a>
-        </td>
-
-      </tr>
+        <p>Clarinet Concerto</p>
+      </div>
 
 
-      <tr>
+      <div class="item">
+        <img src="data/rache-spectrogram-histograms.png"
+             alt="Spectrogram histograms for Der Hölle Rache">
 
-        <td>Der Hölle Rache</td>
+        <p>Der Hölle Rache</p>
+      </div>
 
-        <td>
-          <a href="data/rache-spectro.csv">
-            Spectrogram CSV
-          </a>
-        </td>
-
-        <td>
-          <a href="data/Rache_Mfcc.csv">
-            MFCC CSV
-          </a>
-        </td>
-
-        <td>
-          <a href="data/Rache_chroma.csv">
-            Chroma CSV
-          </a>
-        </td>
-
-      </tr>
-
-    </table>
-
-
-    <!-- Task 2 will be added below later -->
-
-<h2>Task 2: Computing and Visualising Histograms</h2>
-
-<p>
-  I used Python in Jupyter Notebook to load the raw feature data
-  and create histograms for each of the three recordings.
-</p>
-
-
-<h2>Spectrogram Histograms</h2>
-
-<h3>Eine kleine Nachtmusik – 1. Allegro</h3>
-
-<img class="graph"
-     src="data/eine-spectrogram-histograms.png"
-     alt="Spectrogram histograms for Eine kleine Nachtmusik">
-
-
-<h3>Klarinettenkonzert A-Dur – 2. Adagio</h3>
-
-<img class="graph"
-     src="data/clarinet-spectrogram-histograms.png"
-     alt="Spectrogram histograms for Clarinet Concerto">
-
-
-<h3>Der Hölle Rache</h3>
-
-<img class="graph"
-     src="data/rache-spectrogram-histograms.png"
-     alt="Spectrogram histograms for Der Hölle Rache">
+    </div>
 
 
 
-<h2>MFCC Histograms</h2>
+    <h3>Histograms Computed from MFCCs</h3>
 
-<h3>Eine kleine Nachtmusik – 1. Allegro</h3>
-
-<img class="graph"
-     src="data/eine-mfcc-histograms.png"
-     alt="MFCC histograms for Eine kleine Nachtmusik">
-
-
-<h3>Klarinettenkonzert A-Dur – 2. Adagio</h3>
-
-<img class="graph"
-     src="data/clarinet-mfcc-histograms.png"
-     alt="MFCC histograms for Clarinet Concerto">
+    <p>
+      MFCCs describe characteristics of the sound and can be used to compare
+      differences in timbre between recordings.
+    </p>
 
 
-<h3>Der Hölle Rache</h3>
+    <div class="three-column">
 
-<img class="graph"
-     src="data/rache-mfcc-histograms.png"
-     alt="MFCC histograms for Der Hölle Rache">
+      <div class="item">
+        <img src="data/eine-mfcc-histograms.png"
+             alt="MFCC histograms for Eine kleine Nachtmusik">
+
+        <p>Eine kleine Nachtmusik</p>
+      </div>
+
+
+      <div class="item">
+        <img src="data/clarinet-mfcc-histograms.png"
+             alt="MFCC histograms for Clarinet Concerto">
+
+        <p>Clarinet Concerto</p>
+      </div>
+
+
+      <div class="item">
+        <img src="data/rache-mfcc-histograms.png"
+             alt="MFCC histograms for Der Hölle Rache">
+
+        <p>Der Hölle Rache</p>
+      </div>
+
+    </div>
+
+
+
+    <h3>Histograms Computed from Chromagrams</h3>
+
+    <p>
+      Chromagrams represent the distribution of pitch classes in the recordings.
+    </p>
+
+
+    <div class="three-column">
+
+      <div class="item">
+        <img src="data/eine-chroma-histograms.png"
+             alt="Chroma histograms for Eine kleine Nachtmusik">
+
+        <p>Eine kleine Nachtmusik</p>
+      </div>
+
+
+      <div class="item">
+        <img src="data/clarinet-chroma-histograms.png"
+             alt="Chroma histograms for Clarinet Concerto">
+
+        <p>Clarinet Concerto</p>
+      </div>
+
+
+      <div class="item">
+        <img src="data/rache-chroma-histograms.png"
+             alt="Chroma histograms for Der Hölle Rache">
+
+        <p>Der Hölle Rache</p>
+      </div>
+
+    </div>
+
+
+
+    <h2>MFCC Feature Comparison</h2>
+
+    <p>
+      I compared MFCC Feature 1 across the three recordings to see whether
+      the distributions showed clear differences between the tracks.
+    </p>
+
+    <img class="comparison"
+         src="data/mfcc-feature1-comparison.png"
+         alt="MFCC Feature 1 comparison between the three recordings">
+
+
+
+    <h2>Discussion</h2>
+
+    <p>
+      The comparison of the MFCC histograms is discussed here.
+    </p>
+
+
   </div>
 
 </body>
